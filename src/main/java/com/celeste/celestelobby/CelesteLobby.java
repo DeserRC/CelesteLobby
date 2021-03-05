@@ -1,6 +1,6 @@
 package com.celeste.celestelobby;
 
-import com.celeste.celestelobby.command.SetLocationCommand;
+import com.celeste.celestelobby.command.SetSpawnCommand;
 import com.celeste.celestelobby.command.SetNPCCommand;
 import com.celeste.celestelobby.listener.NPCListener;
 import com.celeste.celestelobby.listener.PlayerListener;
@@ -43,7 +43,7 @@ public class CelesteLobby extends JavaPlugin {
         holder.setMessage(MessageType.NO_PERMISSION, "§c§lCELESTE §7Você não tem permissão para isso.");
 
         frame.registerCommands(
-          new SetLocationCommand(this),
+          new SetSpawnCommand(this),
           new SetNPCCommand(this)
         );
     }

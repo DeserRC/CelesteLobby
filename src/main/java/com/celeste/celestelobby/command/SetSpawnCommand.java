@@ -11,17 +11,17 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 @RequiredArgsConstructor
-public class SetLocationCommand {
+public class SetSpawnCommand {
 
     private final CelesteLobby plugin;
 
     @Command(
-      name = "setlocation",
+      name = "setspawn",
       permission = "lobby.admin",
       target = CommandTarget.PLAYER,
-      usage = "setlocation"
+      usage = "setspawn"
     )
-    public void handleSetLocationCommand(final Context<Player> context) {
+    public void handleSetSpawnCommand(final Context<Player> context) {
         final ConfigManager config = plugin.getConfigManager();
 
         final Player player = context.getSender();
