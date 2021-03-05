@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'maven'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+}
+
+group 'com.celeste.celesteconector'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven { url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"}
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots"}
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    /*
+    SPIGOT
+    */
+    compileOnly "org.spigotmc:spigot:1.16.4-R0.1-SNAPSHOT"
+
+    /*
+    FRAMEWORK
+    */
+    implementation "com.github.SaiintBrisson.command-framework:bukkit:1.1.1"
+
+    /*
+    ANNOTATION
+    */
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+tasks.withType(Jar) {
+    destinationDirectory.set(file("$rootDir/target/"))
+}
