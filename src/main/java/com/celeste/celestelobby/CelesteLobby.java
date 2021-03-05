@@ -4,6 +4,7 @@ import com.celeste.celestelobby.command.SetSpawnCommand;
 import com.celeste.celestelobby.command.SetNPCCommand;
 import com.celeste.celestelobby.listener.NPCListener;
 import com.celeste.celestelobby.listener.PlayerListener;
+import com.celeste.celestelobby.manager.BungeeCordManager;
 import com.celeste.celestelobby.manager.ConfigManager;
 import lombok.Getter;
 import me.saiintbrisson.bukkit.command.BukkitFrame;
@@ -16,10 +17,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class CelesteLobby extends JavaPlugin {
 
     private ConfigManager configManager;
+    private BungeeCordManager bungeeCordManager;
 
     @Override
     public void onLoad() {
         this.configManager = new ConfigManager(this);
+        this.bungeeCordManager = new BungeeCordManager(this);
     }
 
     @Override
@@ -30,6 +33,7 @@ public class CelesteLobby extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        bungeeCordManager.close();
         HandlerList.unregisterAll();
     }
 
