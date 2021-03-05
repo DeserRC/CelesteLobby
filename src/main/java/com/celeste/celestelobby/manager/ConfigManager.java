@@ -41,6 +41,14 @@ public class ConfigManager {
     }
 
     @SneakyThrows
+    public void put(final String path, final Object value) {
+        final File file = new File(plugin.getDataFolder(), "config.yml");
+
+        config.set(path, value);
+        config.save(file);
+    }
+
+    @SneakyThrows
     public void load() {
         // config.yml
         final File fileConfig = new File(plugin.getDataFolder(), "config.yml");
