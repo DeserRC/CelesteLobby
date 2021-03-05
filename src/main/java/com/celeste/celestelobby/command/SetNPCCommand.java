@@ -10,13 +10,8 @@ import me.saiintbrisson.minecraft.command.target.CommandTarget;
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.Location;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerTeleportEvent;
-import org.bukkit.metadata.FixedMetadataValue;
-
-import java.util.Collection;
 
 @RequiredArgsConstructor
 public class SetNPCCommand {

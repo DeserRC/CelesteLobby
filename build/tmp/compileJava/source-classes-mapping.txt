@@ -2,8 +2,8 @@ com/celeste/celestelobby/util/LocationUtil.java
  com.celeste.celestelobby.util.LocationUtil
 com/celeste/celestelobby/util/ReflectionUtil.java
  com.celeste.celestelobby.util.ReflectionUtil
-com/celeste/celestelobby/CelesteLobby.java
- com.celeste.celestelobby.CelesteLobby
+com/celeste/celestelobby/listener/NPCListener.java
+ com.celeste.celestelobby.listener.NPCListener
 com/celeste/celestelobby/manager/BungeeCordManager.java
  com.celeste.celestelobby.manager.BungeeCordManager
 com/celeste/celestelobby/manager/ConfigManager.java
@@ -12,7 +12,9 @@ com/celeste/celestelobby/command/SetSpawnCommand.java
  com.celeste.celestelobby.command.SetSpawnCommand
 com/celeste/celestelobby/listener/PlayerListener.java
  com.celeste.celestelobby.listener.PlayerListener
-com/celeste/celestelobby/listener/NPCListener.java
- com.celeste.celestelobby.listener.NPCListener
+com/celeste/celestelobby/listener/WorldListener.java
+ com.celeste.celestelobby.listener.WorldListener
+com/celeste/celestelobby/CelesteLobby.java
+ com.celeste.celestelobby.CelesteLobby
 com/celeste/celestelobby/command/SetNPCCommand.java
  com.celeste.celestelobby.command.SetNPCCommand
