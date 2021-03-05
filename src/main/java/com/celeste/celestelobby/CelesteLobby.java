@@ -52,4 +52,5 @@ public class CelesteLobby extends JavaPlugin {
         new PlayerListener(this);
         new NPCListener(this);
     }
+
 }
