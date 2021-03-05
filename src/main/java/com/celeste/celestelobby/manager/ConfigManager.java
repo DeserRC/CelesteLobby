@@ -26,8 +26,8 @@ public class ConfigManager {
     }
 
     @SuppressWarnings("unchecked")
-    public <T> T get(final String path, final FileConfiguration file) {
-        final T result = (T) file.get(path, "§cThere was an error loading the message: §e" + path);
+    public <T> T get(final String path) {
+        final T result = (T) config.get(path, "§cThere was an error loading the message: §e" + path);
 
         if (result instanceof String)
             return (T) ((String) result).replace("&", "\u00A7");

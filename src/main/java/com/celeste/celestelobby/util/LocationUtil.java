@@ -23,27 +23,20 @@ public class LocationUtil {
     public static Location deserialize(final String serializeLocation) {
         final String[] split = serializeLocation.split(":");
 
-        if (split.length == 4) {
-
+        if (split.length == 4)
             return new Location(
               Bukkit.getWorld(split[0]),
               Double.parseDouble(split[1]),
               Double.parseDouble(split[2]),
               Double.parseDouble(split[3]));
 
-        } else if (split.length == 6) {
-
-            return new Location(
-              Bukkit.getWorld(split[0]),
-              Double.parseDouble(split[1]),
-              Double.parseDouble(split[2]),
-              Double.parseDouble(split[3]),
-              Float.parseFloat(split[4]),
-              Float.parseFloat(split[5]));
-
-        }
-
-        return null;
+        return new Location(
+          Bukkit.getWorld(split[0]),
+          Double.parseDouble(split[1]),
+          Double.parseDouble(split[2]),
+          Double.parseDouble(split[3]),
+          Float.parseFloat(split[4]),
+          Float.parseFloat(split[5]));
     }
 
 }
