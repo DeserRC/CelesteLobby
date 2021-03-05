@@ -4,6 +4,7 @@ import com.celeste.celestelobby.command.SetSpawnCommand;
 import com.celeste.celestelobby.command.SetNPCCommand;
 import com.celeste.celestelobby.listener.NPCListener;
 import com.celeste.celestelobby.listener.PlayerListener;
+import com.celeste.celestelobby.listener.WorldListener;
 import com.celeste.celestelobby.manager.BungeeCordManager;
 import com.celeste.celestelobby.manager.ConfigManager;
 import lombok.Getter;
@@ -55,6 +56,7 @@ public class CelesteLobby extends JavaPlugin {
     private void registerListener() {
         new PlayerListener(this);
         new NPCListener(this);
+        new WorldListener(this);
     }
 
 }
