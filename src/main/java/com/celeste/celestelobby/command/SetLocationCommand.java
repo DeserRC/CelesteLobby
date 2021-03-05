@@ -27,7 +27,7 @@ public class SetLocationCommand {
         final Player player = context.getSender();
         final Location location = player.getLocation();
 
-        final String serializeLocation = LocationUtil.serialize(location);
+        final String serializeLocation = LocationUtil.serialize(location, true);
         config.put("spawn", serializeLocation);
 
         player.sendMessage("§c§lCELESTE §7Localização do spawn alterada com sucesso.");

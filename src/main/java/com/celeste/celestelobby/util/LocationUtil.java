@@ -7,15 +7,18 @@ import java.util.StringJoiner;
 
 public class LocationUtil {
 
-    public static String serialize(final Location location) {
+    public static String serialize(final Location location, final boolean yawAndPitch) {
         final StringJoiner joiner = new StringJoiner(":");
 
         joiner.add(location.getWorld().getName());
         joiner.add(String.valueOf(location.getX()));
         joiner.add(String.valueOf(location.getY()));
         joiner.add(String.valueOf(location.getZ()));
-        joiner.add(String.valueOf(location.getYaw()));
-        joiner.add(String.valueOf(location.getPitch()));
+
+        if (yawAndPitch) {
+            joiner.add(String.valueOf(location.getYaw()));
+            joiner.add(String.valueOf(location.getPitch()));
+        }
 
         return joiner.toString().substring(0, joiner.length() - 1);
     }

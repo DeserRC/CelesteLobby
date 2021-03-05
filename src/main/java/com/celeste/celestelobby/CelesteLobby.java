@@ -1,6 +1,8 @@
 package com.celeste.celestelobby;
 
 import com.celeste.celestelobby.command.SetLocationCommand;
+import com.celeste.celestelobby.command.SetNPCCommand;
+import com.celeste.celestelobby.listener.NPCListener;
 import com.celeste.celestelobby.listener.PlayerListener;
 import com.celeste.celestelobby.manager.ConfigManager;
 import lombok.Getter;
@@ -8,7 +10,6 @@ import me.saiintbrisson.bukkit.command.BukkitFrame;
 import me.saiintbrisson.minecraft.command.message.MessageHolder;
 import me.saiintbrisson.minecraft.command.message.MessageType;
 import org.bukkit.event.HandlerList;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 @Getter
@@ -42,11 +43,13 @@ public class CelesteLobby extends JavaPlugin {
         holder.setMessage(MessageType.NO_PERMISSION, "§c§lCELESTE §7Você não tem permissão para isso.");
 
         frame.registerCommands(
-          new SetLocationCommand(this)
+          new SetLocationCommand(this),
+          new SetNPCCommand(this)
         );
     }
 
     private void registerListener() {
         new PlayerListener(this);
+        new NPCListener(this);
     }
 }

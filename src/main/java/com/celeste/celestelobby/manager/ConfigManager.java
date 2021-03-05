@@ -3,11 +3,15 @@ package com.celeste.celestelobby.manager;
 import com.celeste.celestelobby.CelesteLobby;
 import lombok.Getter;
 import lombok.SneakyThrows;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Getter
@@ -38,6 +42,12 @@ public class ConfigManager {
               .collect(Collectors.toList());
 
         return result;
+    }
+
+    public Set<String> getKeys(final String path) {
+        final ConfigurationSection section = config.getConfigurationSection(path);
+        final Optional<Set<String>> optional = Optional.of(section.getKeys(false));
+        return optional.orElse(new HashSet<>());
     }
 
     @SneakyThrows
