@@ -1,0 +1,5 @@
+name: CelesteElevator
+main: com.celeste.celestelobby.CelesteLobby
+version: 1.0.0
+depend: [Citizens]
+author: Deser
