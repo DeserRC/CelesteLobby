@@ -32,7 +32,7 @@ public class NPCListener implements Listener {
             return;
         }
 
-        if (!config.getConfig().contains("npc" + id)) return;
+        if (!config.getConfig().contains("npc." + id)) return;
 
         final String server = config.get("npc." + id + ".server");
         bungee.connect(server, player);
