@@ -5,7 +5,7 @@ plugins {
     id "com.github.johnrengelman.shadow" version "6.1.0"
 }
 
-group 'com.celeste.celesteconector'
+group 'com.celeste.celestelobby'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8

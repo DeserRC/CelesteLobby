@@ -1,4 +1,4 @@
-name: CelesteElevator
+name: CelesteLobby
 main: com.celeste.celestelobby.CelesteLobby
 version: 1.0.0
 depend: [Citizens]
