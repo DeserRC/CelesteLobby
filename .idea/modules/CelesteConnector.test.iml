@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.system.module.type="sourceSet" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../src/test" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="CelesteConnector.main" />
+    <orderEntry type="library" name="Gradle: com.github.SaiintBrisson.command-framework:bukkit:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.SaiintBrisson.command-framework:shared:1.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains:annotations:16.0.2" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="CelesteConnector.main" />
+</module>
